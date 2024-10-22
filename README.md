@@ -114,10 +114,49 @@ Para reiniciar Apache utilizamos el siguiente comando:
 
     systemctl restart apache2
 
+# 2. Instalación de WordPress
 
+> [!IMPORTANT]
+> En este apartado trataremos la instalación de WordPress y la configuración de todos sus permisos y bases de datos
 
+## 2.1 Descarga de Wordpress
 
-    
-    
+Para descargar e instalar Wordpress utilizamos los siguientes comandos:
 
+> [!NOTE]
+> Estos comandos se encargan de la descarga de wordpress mediante un Wget
 
+    cd /var/www/html
+    wget https://wordpress.org/latest.tar.gz
+    tar -xvzf latest.tar.gz
+    mv wordpress/* .
+    rm -rf wordpress latest.tar.gz
+
+## 2.2 Configuración de los permisos
+
+Para configurar los permisos de WordPress se utilizan los siguientes comandos
+
+> [!NOTE]
+> Estos comandos sirven para configurar los permisos de WordPress
+
+    chown -R www-data:www-data /var/www/html
+    chmod -R 755 /var/www/html
+
+## 2.3 Creación de la base de datos
+
+> [!NOTE]
+> Estos comandos sirven para configurar y crear una base de datos para WordPress
+
+    mysql -u root -p
+    CREATE DATABASE wordpress;
+    EXIT;
+
+## 2.4 Configuración de WordPress
+
+> [!NOTE]
+> Estos comandos sirven para configurar la propia aplicación de WordPress
+
+    define('DB_NAME', '[INTRODUCIR NOMBRE]');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', '[INTRODUCIR CONTRASEÑA]');
+    define('DB_HOST', 'localhost');
