@@ -1,0 +1,123 @@
+# Proyecto_Docker_03
+
+En este proyecto vamos a aprender a instalar LAMP dentro de un contenedor de Ubuntu, y a utilizarlo junto a Apache y PHP, para rematar instalando WordPress.
+
+Vamos a seguir los siguientes pasos:
+
+    1. Proceso de Instalación LAMP
+      1.1 Descarga de la imagen de Ubuntu
+      1.2 Lanzamiento del contenedor de Ubuntu
+      1.3 Actualización de los paquetes
+      1.4 Instalación de Apache
+      1.5 Instalación de MySQL
+      1.6 Instalación de PHP
+      1.7 Reinicio de Apache
+
+    2. Instalación de WordPress
+      2.1 Descarga de WordPress
+      2.2 Configuración de los permisos
+      2.3 Creación de una base de datos
+      2.4 Configuración de WordPress
+
+    3. Comprobación de acceso
+      3.1 Acceso a WordPress mediante Apache
+
+# 1. Proceso de instalación LAMP
+
+> [!IMPORTANT]
+> En este apartado vamos a tratar la instalación de previa de todos los requisitos necesarios para el funcionamiento de WordPress
+
+## 1.1 Descarga de la imagen de Ubuntu
+
+Para descargar la imagen de ubuntu mediante Docker utilizamos el siguiente comando:
+
+> [!NOTE]
+> Este comando se encarga de hacer un Pull a los servidores de docker para recoger la imagen deseada.
+
+    sudo docker pull ubuntu
+
+Resultado:
+
+![Resultado del pull de Ubuntu]()
+
+## 1.2 Lanzamiento del contenedor de Ubuntu
+
+Para lanzar un contenedor derivado de la imagen de Ubuntu utilizamos el siguiente comando:
+
+> [!NOTE]
+> Este comando se encarga de crear un nuevo contenedor de la imagen que nosotros deseemos.
+
+    sudo docker run -it ubuntu bash
+
+Resultado:
+
+![Resultado de la creación del contenedor]()
+
+## 1.3 Actualización de los paquetes
+
+Para actualizar los paquetes de instalación utilizamos el siguiente comando dentro del contenedor:
+
+> [!NOTE]
+> Este comando se encarga de actualizar los paquetes de instalación que se encuentran en la base de datos
+
+    apt update && apt upgrade -y
+
+Resultado:
+
+![Resultado de la actualización de los paquetes dentro del contenedor]()
+
+## 1.4 Instalación de Apache
+
+Para instalar Apache vamos a utilizar el siguiente comando:
+
+> [!NOTE]
+> Este comando se encarga de descargar Apache desde la base de datos de Ubuntu 
+
+    apt install apache2 -y
+
+Resultado:
+
+![Resultado de la instalación de Apache]()
+
+## 1.5 Instalación de MySQL
+
+Para instalar MySQL utilizamos el siguiente comando:
+
+> [!NOTE]
+> Este comando se encarga de descargar MySQL desde la base de datos de Ubuntu
+
+    apt install mysql-server -y
+
+Resultado:
+
+![Resultado de la instalación de MySQL]()
+
+## 1.6 Instalación de PHP
+
+Para instalar PHP utilizamos el siguiente Comando:
+
+> [!NOTE]
+> Este comando se encarga de descargar PHP desde la base de datos de Ubuntu
+
+    apt install php libapache2-mod-php php-mysql -y
+
+Resultado:
+
+![Resultado de la instalación de PHP]()
+
+## 1.7 Reinicio de Apache
+
+Para reiniciar Apache utilizamos el siguiente comando: 
+
+> [!NOTE]
+> Este comando se encarga reiniciar Apache para poder aplicar todos los datos nuevos que hemos introducido
+
+    systemctl restart apache2
+
+
+
+
+    
+    
+
+
