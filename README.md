@@ -38,7 +38,7 @@ Para descargar la imagen de ubuntu mediante Docker utilizamos el siguiente coman
 
 Resultado:
 
-![Resultado del pull de Ubuntu]()
+![Resultado del pull de Ubuntu](Images_Docker/01_Pull_Ubuntu)
 
 ## 1.2 Lanzamiento del contenedor de Ubuntu
 
@@ -51,7 +51,7 @@ Para lanzar un contenedor derivado de la imagen de Ubuntu utilizamos el siguient
 
 Resultado:
 
-![Resultado de la creación del contenedor]()
+![Resultado de la creación del contenedor](Images_Docker/02_Contenedor_Ubuntu)
 
 ## 1.3 Actualización de los paquetes
 
@@ -64,7 +64,7 @@ Para actualizar los paquetes de instalación utilizamos el siguiente comando den
 
 Resultado:
 
-![Resultado de la actualización de los paquetes dentro del contenedor]()
+![Resultado de la actualización de los paquetes dentro del contenedor](Images_Docker/03_Resultado_Actualizar_Paquetes)
 
 ## 1.4 Instalación de Apache
 
@@ -77,7 +77,7 @@ Para instalar Apache vamos a utilizar el siguiente comando:
 
 Resultado:
 
-![Resultado de la instalación de Apache]()
+![Resultado de la instalación de Apache](Images_Docker/04_Resultado_Instalar_Apache)
 
 ## 1.5 Instalación de MySQL
 
@@ -90,7 +90,7 @@ Para instalar MySQL utilizamos el siguiente comando:
 
 Resultado:
 
-![Resultado de la instalación de MySQL]()
+![Resultado de la instalación de MySQL](Images_Docker/04_Resultado_Instalar_MySQL)
 
 ## 1.6 Instalación de PHP
 
@@ -103,7 +103,7 @@ Para instalar PHP utilizamos el siguiente Comando:
 
 Resultado:
 
-![Resultado de la instalación de PHP]()
+![Resultado de la instalación de PHP](Images_Docker/04_Resultado_Instalar_PHP)
 
 ## 1.7 Reinicio de Apache
 
@@ -160,3 +160,19 @@ Para configurar los permisos de WordPress se utilizan los siguientes comandos
     define('DB_USER', 'root');
     define('DB_PASSWORD', '[INTRODUCIR CONTRASEÑA]');
     define('DB_HOST', 'localhost');
+
+## 3 Comprobación de Acceso
+
+> [!IMPORTANT]
+> En este apartado trataremos el como acceder a la página de WordPress mediante Apache
+
+## 3.1 Acceso a WordPress mediante Apache
+
+Para acceder a WordPress mediante Apache usamos el sisguiente comando
+
+> [!NOTE]
+> Este comando sirve para iniciar el servidor de Apache
+
+    systemctl start apache2
+
+Finalmente navegamos a http://<IP_del_contenedor> para acceder al sistema y comprobar que todo funcione
