@@ -38,7 +38,7 @@ Para descargar la imagen de ubuntu mediante Docker utilizamos el siguiente coman
 
 Resultado:
 
-![Resultado del pull de Ubuntu](Images_Docker/01_Pull_Ubuntu)
+![Resultado del pull de Ubuntu](Images_Docker/01_Pull_Ubuntu.png)
 
 ## 1.2 Lanzamiento del contenedor de Ubuntu
 
@@ -51,7 +51,7 @@ Para lanzar un contenedor derivado de la imagen de Ubuntu utilizamos el siguient
 
 Resultado:
 
-![Resultado de la creación del contenedor](Images_Docker/02_Contenedor_Ubuntu)
+![Resultado de la creación del contenedor](Images_Docker/02_Contenedor_Ubuntu.png)
 
 ## 1.3 Actualización de los paquetes
 
@@ -64,7 +64,7 @@ Para actualizar los paquetes de instalación utilizamos el siguiente comando den
 
 Resultado:
 
-![Resultado de la actualización de los paquetes dentro del contenedor](Images_Docker/03_Resultado_Actualizar_Paquetes)
+![Resultado de la actualización de los paquetes dentro del contenedor](Images_Docker/03_Resultado_Actualizar_Paquetes.png)
 
 ## 1.4 Instalación de Apache
 
@@ -77,7 +77,7 @@ Para instalar Apache vamos a utilizar el siguiente comando:
 
 Resultado:
 
-![Resultado de la instalación de Apache](Images_Docker/04_Resultado_Instalar_Apache)
+![Resultado de la instalación de Apache](Images_Docker/04_Resultado_Instalar_Apache.png)
 
 ## 1.5 Instalación de MySQL
 
@@ -90,7 +90,7 @@ Para instalar MySQL utilizamos el siguiente comando:
 
 Resultado:
 
-![Resultado de la instalación de MySQL](Images_Docker/04_Resultado_Instalar_MySQL)
+![Resultado de la instalación de MySQL](Images_Docker/05_Resultado_Instalar_MySQL.png)
 
 ## 1.6 Instalación de PHP
 
@@ -103,7 +103,7 @@ Para instalar PHP utilizamos el siguiente Comando:
 
 Resultado:
 
-![Resultado de la instalación de PHP](Images_Docker/04_Resultado_Instalar_PHP)
+![Resultado de la instalación de PHP](Images_Docker/06_Resultado_Instalar_PHP.png)
 
 ## 1.7 Reinicio de Apache
 
